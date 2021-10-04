@@ -1,12 +1,12 @@
 import { h, nextTick, ref, defineComponent } from 'vue'
 import { EditorState, EditorView } from '@codemirror/basic-setup'
 import { Extension } from '@codemirror/state'
-import { lineNumbers } from '@codemirror/gutter'
 import { ViewPlugin } from '@codemirror/view'
+import { lineNumbers, highlightActiveLineGutter } from '@codemirror/gutter'
 import { javascript } from '@codemirror/lang-javascript'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
-import { basicSetup, hoverPreview } from './plugin'
+import { basicSetup, hoverPreview } from '../logics/editorPlugins'
 
 export default defineComponent({
   name: 'Editor',
@@ -61,16 +61,18 @@ export default defineComponent({
         reactivePlugin,
       ]
 
-      // if (props.processor)
-      //   extensions.push(hoverPreview(props.processor))
+      if (props.processor)
+        extensions.push(hoverPreview(props.processor))
       if (props.language === 'html')
         extensions.push(html())
       if (props.language === 'css')
         extensions.push(css())
       if (props.language === 'js')
         extensions.push(javascript())
-      if (props.lineNumbers)
+      if (props.lineNumbers) {
         extensions.push(lineNumbers())
+        extensions.push(highlightActiveLineGutter())
+      }
       state = EditorState.create({
         doc: props.modelValue,
         extensions,

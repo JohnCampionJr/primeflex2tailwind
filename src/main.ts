@@ -14,6 +14,7 @@ import './styles/scrollbar.css'
 import './styles/markdown.css'
 import './styles/codemirror-prism-vars.css'
 import './styles/main.css'
+import './styles/primeflex-tailwind/index.scss'
 import 'virtual:windi-utilities.css'
 const app = createApp(App)
 const router = createRouter({

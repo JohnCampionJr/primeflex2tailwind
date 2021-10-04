@@ -1,0 +1,61 @@
+$surfaceShades: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@include surface-class('text', 'color', $surfaceShades);
+@include surface-class('surface', 'background-color', $surfaceShades);
+@include surface-class('border', 'border-color', $surfaceShades);
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--primary-color-text) !important;
+}
+
+.hover\:bg-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--primary-color-text) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.hover\:border-primary:hover {
+    border-color: var(--primary-color) !important;
+}
+
+.bg-primary-reverse {
+    background-color: var(--primary-color-text) !important;
+    color: var(--primary-color) !important;
+}
+
+.hover\:bg-primary-reverse:hover {
+    background-color: var(--primary-color-text) !important;
+    color: var(--primary-color) !important;
+}
+
+.surface-ground {
+    background-color: var(--surface-ground);
+}
+
+.surface-section {
+    background-color: var(--surface-section);
+}
+
+.surface-card {
+    background-color: var(--surface-card);
+}
+
+.surface-overlay {
+    background-color: var(--surface-overlay);
+}
+
+.surface-border {
+    border-color: var(--surface-border);
+}

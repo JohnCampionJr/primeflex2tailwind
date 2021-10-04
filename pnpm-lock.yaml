@@ -26,7 +26,9 @@ specifiers:
   '@codemirror/theme-one-dark': ^0.18.1
   '@codemirror/tooltip': ^0.18.4
   '@codemirror/view': ^0.18.17
+  '@iconify-json/bx': ^1.0.1
   '@iconify-json/carbon': ^1.0.3
+  '@iconify-json/ion': ^1.0.1
   '@types/node': ^16.10.2
   '@types/prismjs': ^1.16.5
   '@typescript-eslint/eslint-plugin': ^4.32.0
@@ -42,6 +44,7 @@ specifiers:
   primevue: ^3.1.0
   prism-theme-vars: ^0.2.2
   prismjs: ^1.25.0
+  sass: ^1.42.1
   splitpanes: ^3.0.6
   typescript: ^4.4.3
   unplugin-auto-import: ^0.4.10
@@ -97,7 +100,9 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
+  '@iconify-json/bx': 1.0.1
   '@iconify-json/carbon': 1.0.3
+  '@iconify-json/ion': 1.0.1
   '@types/node': 16.10.2
   '@types/prismjs': 1.16.6
   '@typescript-eslint/eslint-plugin': 4.32.0_eslint@7.32.0+typescript@4.4.3
@@ -106,11 +111,12 @@ devDependencies:
   cross-env: 7.0.3
   eslint: 7.32.0
   pnpm: 6.16.0
+  sass: 1.42.1
   typescript: 4.4.3
   unplugin-auto-import: 0.4.10_@vueuse+core@6.5.3+vite@2.6.2
   unplugin-icons: 0.12.3_482d2d3d4c9442e66bdc4cb86c777ab2
   unplugin-vue-components: 0.15.6_vite@2.6.2+vue@3.2.19
-  vite: 2.6.2
+  vite: 2.6.2_sass@1.42.1
   vite-plugin-pages: 0.18.1_482d2d3d4c9442e66bdc4cb86c777ab2
   vite-plugin-windicss: 1.4.9_typescript@4.4.3+vite@2.6.2
 
@@ -726,8 +732,20 @@ packages:
     resolution: {integrity: sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==}
     dev: true
 
+  /@iconify-json/bx/1.0.1:
+    resolution: {integrity: sha512-H2qhgI/hSUIaKyAbHUN1I7Bw0M0+zQlLq+nwRzchd7JEWutSoy51jIOT+o25UWoYTYGJHf50ewEHmbrugqFqmw==}
+    dependencies:
+      '@iconify/types': 1.0.9
+    dev: true
+
   /@iconify-json/carbon/1.0.3:
     resolution: {integrity: sha512-ltobh3wpHVZelp9lEMnMYNwp4uoGO7cnBltl+tDeHgQ7qVW31JV9WdC9tOCT1zqovWmutvsmop/EcN2m74dcGA==}
+    dependencies:
+      '@iconify/types': 1.0.9
+    dev: true
+
+  /@iconify-json/ion/1.0.1:
+    resolution: {integrity: sha512-RTRtRljmNhaB5FgoyJL6kpgy7e2QZId7yTlNMzJR5sNXix0Zhd2fWpVsy+vfoVMS2qbnjw07J99nKySpxHwIJw==}
     dependencies:
       '@iconify/types': 1.0.9
     dev: true
@@ -995,7 +1013,7 @@ packages:
     peerDependencies:
       vite: ^2.5.10
     dependencies:
-      vite: 2.6.2
+      vite: 2.6.2_sass@1.42.1
     dev: true
 
   /@vue/compiler-core/3.2.19:
@@ -2233,6 +2251,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -3364,6 +3383,14 @@ packages:
       regexp-tree: 0.1.23
     dev: true
 
+  /sass/1.42.1:
+    resolution: {integrity: sha512-/zvGoN8B7dspKc5mC6HlaygyCBRvnyzzgD5khiaCfglWztY99cYoiTUksVx11NlnemrcfH5CEaCpsUKoW0cQqg==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
+    dev: true
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -3789,7 +3816,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      vite: 2.6.2
+      vite: 2.6.2_sass@1.42.1
       webpack-virtual-modules: 0.4.3
     dev: true
 
@@ -3825,7 +3852,7 @@ packages:
       deep-equal: 2.0.5
       fast-glob: 3.2.7
       json5: 2.2.0
-      vite: 2.6.2
+      vite: 2.6.2_sass@1.42.1
       yaml: 2.0.0-8
     transitivePeerDependencies:
       - supports-color
@@ -3839,7 +3866,7 @@ packages:
       '@windicss/plugin-utils': 1.4.9_typescript@4.4.3
       chalk: 4.1.2
       debug: 4.3.2
-      vite: 2.6.2
+      vite: 2.6.2_sass@1.42.1
       windicss: 3.1.8
     transitivePeerDependencies:
       - supports-color
@@ -3847,7 +3874,7 @@ packages:
       - typescript
     dev: true
 
-  /vite/2.6.2:
+  /vite/2.6.2_sass@1.42.1:
     resolution: {integrity: sha512-HSIg9U15LOnbD3CUxX364Pdrm7DUjftuBljowGxvkFHgDZU/SKPqApg9t86MX/Qq1VCO7wS+mGJHlfuTF7c0Sg==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -3867,6 +3894,7 @@ packages:
       postcss: 8.3.8
       resolve: 1.20.0
       rollup: 2.58.0
+      sass: 1.42.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

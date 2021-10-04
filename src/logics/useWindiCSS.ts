@@ -27,7 +27,7 @@ export function useWindiCSS(htmlCode: Ref<string>, styleCode: Ref<string>, confi
   })
 
   const generatedCSS = computed(() => new StyleSheet()
-    .extend(preflightStyles.value)
+  //    .extend(preflightStyles.value)
     .extend(transformStyles.value)
     .extend(utilityStyles.value)
     .sort()

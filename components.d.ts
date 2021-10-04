@@ -4,12 +4,29 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppLogo: typeof import('./src/components/AppLogo.vue')['default']
+    'Bx:bxMoon': typeof import('~icons/bx/bx-moon')['default']
+    'Carbon:openPanelBottom': typeof import('~icons/carbon/open-panel-bottom')['default']
+    'Carbon:openPanelLeft': typeof import('~icons/carbon/open-panel-left')['default']
+    'Carbon:openPanelRight': typeof import('~icons/carbon/open-panel-right')['default']
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    Header: typeof import('./src/components/Header.vue')['default']
+    IconButton: typeof import('./src/components/IconButton.vue')['default']
+    IonIosSunny: typeof import('~icons/ion/ios-sunny')['default']
+    PlayActionButtons: typeof import('./src/components/PlayActionButtons.vue')['default']
+    PlayDivide: typeof import('./src/components/PlayDivide.vue')['default']
+    PlayEditorBlock: typeof import('./src/components/PlayEditorBlock.vue')['default']
+    PlayLatoutSwitch: typeof import('./src/components/PlayLatoutSwitch.vue')['default']
+    PlayLayoutSwitch: typeof import('./src/components/PlayLayoutSwitch.vue')['default']
+    PlayPreviewBlock: typeof import('./src/components/PlayPreviewBlock.vue')['default']
+    PlayReadOnlyEditorBlock: typeof import('./src/components/PlayReadOnlyEditorBlock.vue')['default']
+    PlayShareButton: typeof import('./src/components/PlayShareButton.vue')['default']
+    ToggleDark: typeof import('./src/components/ToggleDark.vue')['default']
   }
 }
 

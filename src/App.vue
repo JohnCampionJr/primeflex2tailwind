@@ -1,6 +1,5 @@
 <template>
-  <main class="px-4 py-10">
+  <div class="relative antialiased">
     <router-view />
-    <Footer />
-  </main>
+  </div>
 </template>

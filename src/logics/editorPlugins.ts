@@ -5,7 +5,6 @@ import { foldGutter, foldKeymap } from '@codemirror/fold'
 import { indentOnInput } from '@codemirror/language'
 import { EditorView } from '@codemirror/basic-setup'
 import { hoverTooltip } from '@codemirror/tooltip'
-import { lineNumbers, highlightActiveLineGutter } from '@codemirror/gutter'
 import { defaultKeymap, defaultTabBinding } from '@codemirror/commands'
 import { bracketMatching } from '@codemirror/matchbrackets'
 import { closeBrackets, closeBracketsKeymap } from '@codemirror/closebrackets'
@@ -20,12 +19,13 @@ import { usePrismCSS } from './usePrismCSS'
 
 const tabSize = new Compartment()
 export const basicSetup = [
-  // lineNumbers(),
+  highlightActiveLine(),
   highlightSpecialChars(),
   history(),
   foldGutter(),
   drawSelection(),
   EditorState.allowMultipleSelections.of(true),
+  //  EditorView.editable.of(false),
   indentOnInput(),
   classHighlightStyle.fallback,
   bracketMatching(),
@@ -71,7 +71,7 @@ export const hoverPreview = (processor: any) => {
         create() {
           const dom = document.createElement('div')
           const { highlightedCSS } = usePrismCSS(() => result.styleSheet.build())
-          dom.className = 'text-sm border p-2 rounded !bg-dark-300'
+          dom.className = 'text-sm border p-2 rounded !bg-gray-100'
           dom.innerHTML = `<pre><code>${highlightedCSS.value}</code></pre>`
           return { dom }
         },
