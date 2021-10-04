@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import VRuntimeTemplate from 'vue3-runtime-template'
+import { compileTemplate } from '@vue/compiler-sfc'
 import Editor from '../components/Editor'
-import IFramePreview from '~/components/IFramePreview'
+// import IFramePreview from '~/components/IFramePreview'
 import { useWindiCSS } from '~/components/useWindiCSS'
 
 const name = ref('')
@@ -20,14 +21,15 @@ const go = () => {
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 watchEffect(() => {
-  try {
-    secondCode.value = htmlCode.value
-    template.value = htmlCode.value
-    const element = document.getElementById('windi-dyn')
-    if (element)
-      element.innerHTML = generatedCSS.value
-  }
-  finally {}
+  // check the template first
+  const tempResult = compileTemplate({ source: htmlCode.value, id: 'internal', filename: 'internal' })
+  if (tempResult.errors.length > 0) return
+
+  secondCode.value = htmlCode.value
+  template.value = htmlCode.value
+  const element = document.getElementById('windi-dyn')
+  if (element)
+    element.innerHTML = generatedCSS.value
 })
 </script>
 
