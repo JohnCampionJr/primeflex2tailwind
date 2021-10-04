@@ -2,15 +2,47 @@ lockfileVersion: 5.3
 
 specifiers:
   '@antfu/eslint-config': ^0.9.0
+  '@codemirror/autocomplete': ^0.18.8
+  '@codemirror/basic-setup': ^0.18.2
+  '@codemirror/closebrackets': ^0.18.0
+  '@codemirror/commands': ^0.18.3
+  '@codemirror/comment': ^0.18.1
+  '@codemirror/fold': ^0.18.1
+  '@codemirror/gutter': ^0.18.4
+  '@codemirror/highlight': ^0.18.4
+  '@codemirror/history': ^0.18.1
+  '@codemirror/lang-css': ^0.18.0
+  '@codemirror/lang-html': ^0.18.1
+  '@codemirror/lang-javascript': ^0.18.0
+  '@codemirror/language': ^0.18.2
+  '@codemirror/legacy-modes': ^0.18.1
+  '@codemirror/lint': ^0.18.4
+  '@codemirror/matchbrackets': ^0.18.0
+  '@codemirror/rectangular-selection': ^0.18.0
+  '@codemirror/search': ^0.18.4
+  '@codemirror/state': ^0.18.7
+  '@codemirror/stream-parser': ^0.18.2
+  '@codemirror/text': ^0.18.0
+  '@codemirror/theme-one-dark': ^0.18.1
+  '@codemirror/tooltip': ^0.18.4
+  '@codemirror/view': ^0.18.17
   '@iconify-json/carbon': ^1.0.3
   '@types/node': ^16.10.2
+  '@types/prismjs': ^1.16.5
   '@typescript-eslint/eslint-plugin': ^4.32.0
   '@vitejs/plugin-vue': ^1.9.2
   '@vue/compiler-sfc': ^3.2.19
   '@vueuse/core': ^6.5.3
+  codemirror-theme-vars: ^0.1.1
   cross-env: ^7.0.3
   eslint: ^7.32.0
   pnpm: ^6.16.0
+  primeflex: ^2.0.0
+  primeicons: ^4.1.0
+  primevue: ^3.1.0
+  prism-theme-vars: ^0.2.2
+  prismjs: ^1.25.0
+  splitpanes: ^3.0.6
   typescript: ^4.4.3
   unplugin-auto-import: ^0.4.10
   unplugin-icons: ^0.12.3
@@ -21,17 +53,53 @@ specifiers:
   vue: ^3.2.19
   vue-demi: ^0.11.4
   vue-router: ^4.0.11
+  vue3-runtime-template: ^1.0.1
+  windicss: 3.1.7
 
 dependencies:
+  '@codemirror/autocomplete': 0.18.8
+  '@codemirror/basic-setup': 0.18.2
+  '@codemirror/closebrackets': 0.18.0
+  '@codemirror/commands': 0.18.3
+  '@codemirror/comment': 0.18.1
+  '@codemirror/fold': 0.18.2
+  '@codemirror/gutter': 0.18.4
+  '@codemirror/highlight': 0.18.4
+  '@codemirror/history': 0.18.1
+  '@codemirror/lang-css': 0.18.0
+  '@codemirror/lang-html': 0.18.1
+  '@codemirror/lang-javascript': 0.18.0
+  '@codemirror/language': 0.18.2
+  '@codemirror/legacy-modes': 0.18.1
+  '@codemirror/lint': 0.18.6
+  '@codemirror/matchbrackets': 0.18.0
+  '@codemirror/rectangular-selection': 0.18.1
+  '@codemirror/search': 0.18.4
+  '@codemirror/state': 0.18.7
+  '@codemirror/stream-parser': 0.18.2
+  '@codemirror/text': 0.18.1
+  '@codemirror/theme-one-dark': 0.18.1
+  '@codemirror/tooltip': 0.18.4
+  '@codemirror/view': 0.18.19
   '@vueuse/core': 6.5.3_vue@3.2.19
+  codemirror-theme-vars: 0.1.1
+  primeflex: 2.0.0
+  primeicons: 4.1.0
+  primevue: 3.7.2
+  prism-theme-vars: 0.2.2
+  prismjs: 1.25.0
+  splitpanes: 3.0.6
   vue: 3.2.19
   vue-demi: 0.11.4_vue@3.2.19
   vue-router: 4.0.11_vue@3.2.19
+  vue3-runtime-template: 1.0.1
+  windicss: 3.1.7
 
 devDependencies:
   '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
   '@iconify-json/carbon': 1.0.3
   '@types/node': 16.10.2
+  '@types/prismjs': 1.16.6
   '@typescript-eslint/eslint-plugin': 4.32.0_eslint@7.32.0+typescript@4.4.3
   '@vitejs/plugin-vue': 1.9.2_vite@2.6.2
   '@vue/compiler-sfc': 3.2.19
@@ -382,6 +450,250 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@codemirror/autocomplete/0.18.8:
+    resolution: {integrity: sha512-Va1Q763Vu/rVmIazru/ZnO2kkWVq6SlmMEjeD0qmxLAypyP6j/QNdpmaPDI1qb/+Mb9VFZBbac6a0aLTTi8qxQ==}
+    dependencies:
+      '@codemirror/language': 0.18.2
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/tooltip': 0.18.4
+      '@codemirror/view': 0.18.19
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/basic-setup/0.18.2:
+    resolution: {integrity: sha512-4UNFQ4jhU7wKxJH23AJcZW6Ho54VXUpmbtFnN5amIdtGci4ZLvci4M7JKgKFraHmKfDIYQnSzN8d8ohXR7CRhw==}
+    dependencies:
+      '@codemirror/autocomplete': 0.18.8
+      '@codemirror/closebrackets': 0.18.0
+      '@codemirror/commands': 0.18.3
+      '@codemirror/comment': 0.18.1
+      '@codemirror/fold': 0.18.2
+      '@codemirror/gutter': 0.18.4
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/history': 0.18.1
+      '@codemirror/language': 0.18.2
+      '@codemirror/lint': 0.18.6
+      '@codemirror/matchbrackets': 0.18.0
+      '@codemirror/rectangular-selection': 0.18.1
+      '@codemirror/search': 0.18.4
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/closebrackets/0.18.0:
+    resolution: {integrity: sha512-O1RAgUkzF4nq/B8IyXenZKZ1rJi2Mc7I6y4IhWhELiTnjyQy7YdAthTsJ40mNr8kZ6gRbasYe3K7TraITElZJA==}
+    dependencies:
+      '@codemirror/language': 0.18.2
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/commands/0.18.3:
+    resolution: {integrity: sha512-nHYDG13qOirioXTAKmjl10W2L0eZ1ftvmTwvUTNY27UWVBPFSpk5zDXP3WqJ0mgMhQ4AOFLJaTjJEO3hmPComg==}
+    dependencies:
+      '@codemirror/language': 0.18.2
+      '@codemirror/matchbrackets': 0.18.0
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/comment/0.18.1:
+    resolution: {integrity: sha512-Inhqs0F24WE28Fcp1dBZghwixBGv1HDwY9MjE0d5tpMY/IPGI6uT30fGyHAXrir6hUqk7eJRkO4UYnODGOnoIA==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/fold/0.18.2:
+    resolution: {integrity: sha512-kkQ+stpUbOAU0ASPP9NW5uLLhe5LVC46m47zJUnWDlsT9rS5NZW6NDiWzrDlN8dWQT8fePzkMA174BG4tr2GJw==}
+    dependencies:
+      '@codemirror/gutter': 0.18.4
+      '@codemirror/language': 0.18.2
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/gutter/0.18.4:
+    resolution: {integrity: sha512-Sf2IWshMi9zwVVqpGmd2NRplY0qfrE2IiBEII9n2gB9M8hgIMg5GCyhdnsUDsOm0gcSut65W62vV7/DfYJHQCA==}
+    dependencies:
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/highlight/0.18.4:
+    resolution: {integrity: sha512-3azJntqWrShOIq/0kVcdMc9k7ACL0LQErgK+A6aWXmCj5Mx0gShq+Iajy8AMQ2zB0v3nhCBgFaniL1LLD5m5hQ==}
+    dependencies:
+      '@codemirror/language': 0.18.2
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+      lezer-tree: 0.13.2
+      style-mod: 4.0.0
+    dev: false
+
+  /@codemirror/history/0.18.1:
+    resolution: {integrity: sha512-Aad3p4zs6UYKCUMXYjh7cvPK0ajuL+rMib9yBZ61w81LLl6OkM31Xrn9J6CLJmPxCwP3OJFiqBmNSBQ05oIsTw==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/lang-css/0.18.0:
+    resolution: {integrity: sha512-kkU4Ug387eJoCTDDkMbXrcPBMiJ0lFWbvDaFHIuJtrMgDXJzSQ/ehx6Ife5PUBfuLU/x1JQUBdmXhW1TJzfHug==}
+    dependencies:
+      '@codemirror/autocomplete': 0.18.8
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/language': 0.18.2
+      '@codemirror/state': 0.18.7
+      lezer-css: 0.13.1
+    dev: false
+
+  /@codemirror/lang-html/0.18.1:
+    resolution: {integrity: sha512-NF/QkSiGiDQGF99x/gcr1oybLQRqspQ+N8HH1SSihkKjmrQBOi7yZ4jUHAmmDEU43ujDqueGZfdqg0WhyOx2CA==}
+    dependencies:
+      '@codemirror/autocomplete': 0.18.8
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/lang-css': 0.18.0
+      '@codemirror/lang-javascript': 0.18.0
+      '@codemirror/language': 0.18.2
+      '@codemirror/state': 0.18.7
+      lezer-html: 0.13.6
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/lang-javascript/0.18.0:
+    resolution: {integrity: sha512-4KOkwXED9v39c17pIWoy+WKrNAYaKnAR/RRF8QZIqpuYjnMwGTe7GxMKKdq7E557fGzCVr7m34Qy7Gkhr5B41g==}
+    dependencies:
+      '@codemirror/autocomplete': 0.18.8
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/language': 0.18.2
+      '@codemirror/lint': 0.18.6
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+      lezer-javascript: 0.13.4
+    dev: false
+
+  /@codemirror/language/0.18.2:
+    resolution: {integrity: sha512-2Kz0Xyfvt1Ex2KfTUcYZ3IBxpnFCqHaJijwZknGBT7JXv9dwbOPs9SfPfL4oxVuDIHZx8JTPfoV3LTTJrm8M3Q==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+      lezer: 0.13.5
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/legacy-modes/0.18.1:
+    resolution: {integrity: sha512-Y5ST1K6v+8uK6BxLOtfS38LeOS+rzOCGs91+t6k2hsWwZq3w7LS17I5w1Es2SIuq+7c4GjpVTrijCF2kMxd5ZA==}
+    dependencies:
+      '@codemirror/stream-parser': 0.18.2
+    dev: false
+
+  /@codemirror/lint/0.18.6:
+    resolution: {integrity: sha512-juE05YyDoLp9WCcR0hQagphOCIZ0r4WRocRFu9tbFwsMjfuForjn4m+wsLSDaDgp2Z9secMyOSGDpBNtVwM9lQ==}
+    dependencies:
+      '@codemirror/panel': 0.18.2
+      '@codemirror/state': 0.18.7
+      '@codemirror/tooltip': 0.18.4
+      '@codemirror/view': 0.18.19
+      crelt: 1.0.5
+    dev: false
+
+  /@codemirror/matchbrackets/0.18.0:
+    resolution: {integrity: sha512-dPDopnZVkD54sSYdmQbyQbPdiuIA83p7XxX6Hp1ScEkOjukwCiFXiA/84x10FUTsQpUYp8bDzm7gwII119bGIw==}
+    dependencies:
+      '@codemirror/language': 0.18.2
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/panel/0.18.2:
+    resolution: {integrity: sha512-ea/g2aAKtfmie1kD7C8GDutD/5u+uzRJr/varUiAbHKr1sAdjtz5xYvC3GBAMYMan1GOh0vD5zP1yEupJl3b3Q==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/rangeset/0.18.5:
+    resolution: {integrity: sha512-gvYniNeEbGRp74MM8EQ+0tylK85pVody4r4N5bs94msPwHQSKFkEmosl8tVmS0Z4e8gRtlB37m8/cWoRiuSz5Q==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+    dev: false
+
+  /@codemirror/rectangular-selection/0.18.1:
+    resolution: {integrity: sha512-WpdIo6wyxamncvSZQEO1xsZArRnE5/NtNGnuLCjYUkW5JepdYtEJzIE9czaJqxVGrCBs//Lv58CbGX77/1GAoA==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/search/0.18.4:
+    resolution: {integrity: sha512-3chVkMPzl+pTUSqtimTicebhti4SLpvkj03pQx2aPZScXxIiYuDk4cLdIJK9omjmO1+oycRKbOrqvG7iZJJwMg==}
+    dependencies:
+      '@codemirror/panel': 0.18.2
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      '@codemirror/view': 0.18.19
+      crelt: 1.0.5
+    dev: false
+
+  /@codemirror/state/0.18.7:
+    resolution: {integrity: sha512-cVyTiAC9vv90NKmGOfNtBjyIem3BqKui1L5Hfcxurp8K9votQj2oH9COcgWPnQ2Xs64yC70tEuTt9DF1pj5PFQ==}
+    dependencies:
+      '@codemirror/text': 0.18.1
+    dev: false
+
+  /@codemirror/stream-parser/0.18.2:
+    resolution: {integrity: sha512-3RTRmhIixcC2ps/G8So+BL0qJkwaspjyYt4smVYlSn4eNbxGK9K2RCnSmOPRv0SkuQMu3oUFbprFI/SbtZrPKg==}
+    dependencies:
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/language': 0.18.2
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      lezer: 0.13.5
+      lezer-tree: 0.13.2
+    dev: false
+
+  /@codemirror/text/0.18.1:
+    resolution: {integrity: sha512-vjXs6mi1F418kucTPlFvnCt9glKnjtYssdXb8mm1oaY/F5O+tgGVepm9Z8F7AKWCQvW8Bns1D3uLz/DOIEywIw==}
+    dev: false
+
+  /@codemirror/theme-one-dark/0.18.1:
+    resolution: {integrity: sha512-0XRfWYDfwUlPlN8yrO7bDB+EuHFqUNhTJwgp2iIixZWejuZQK0NxKmjuhkiGsEz25w7toM12uUsNJ5mo7iFQcA==}
+    dependencies:
+      '@codemirror/highlight': 0.18.4
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/tooltip/0.18.4:
+    resolution: {integrity: sha512-LDlDOSEfjoG24uapLN7exK3Z3JchYFKUwWqo1x/9YdlAkmD1ik7cMSQZboCquP1uJVcXhtbpKmaO6vENGVaarg==}
+    dependencies:
+      '@codemirror/state': 0.18.7
+      '@codemirror/view': 0.18.19
+    dev: false
+
+  /@codemirror/view/0.18.19:
+    resolution: {integrity: sha512-TmazVl8H3L+aYwlNb8xk6qADRb8KiYOO047pz51R4mGCg4Ja2siSjXktZgUvklsyWbUY7h9q+oAf4piH+mQZTw==}
+    dependencies:
+      '@codemirror/rangeset': 0.18.5
+      '@codemirror/state': 0.18.7
+      '@codemirror/text': 0.18.1
+      style-mod: 4.0.0
+      w3c-keyname: 2.2.4
+    dev: false
+
   /@eslint/eslintrc/0.4.3:
     resolution: {integrity: sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -477,6 +789,10 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/prismjs/1.16.6:
+    resolution: {integrity: sha512-dTvnamRITNqNkqhlBd235kZl3KfVJQQoT5jkXeiWSBK7i4/TLKBNLV0S1wOt8gy4E2TY722KLtdmv2xc6+Wevg==}
     dev: true
 
   /@types/throttle-debounce/2.1.0:
@@ -1052,6 +1368,10 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
+  /codemirror-theme-vars/0.1.1:
+    resolution: {integrity: sha512-Au0Ysn6tUMZB/1Jd5S8g4Or1kZxTuTnNx6MVs9H46Ad7w8IEjkHusH+4oyia/FBcVuAJO4DIlkDnPM8Qnnf1rg==}
+    dev: false
+
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
@@ -1090,6 +1410,10 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
+
+  /crelt/1.0.5:
+    resolution: {integrity: sha512-+BO9wPPi+DWTDcNYhr/W90myha8ptzftZT+LwcmUbbok0rcP/fequmFYCw8NMoH7pkAZQzU78b3kYrlua5a9eA==}
+    dev: false
 
   /cross-env/7.0.3:
     resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
@@ -2359,6 +2683,39 @@ packages:
       type-check: 0.4.0
     dev: true
 
+  /lezer-css/0.13.1:
+    resolution: {integrity: sha512-ke56tjG17IZ+EFiY50P2WinjhgZQB7OecRVZmYQbVuwv5iUdLemA4vLjaFsAbgoSg+4pfOms7Ns9nItoJcmFpg==}
+    deprecated: This package has been replaced by @lezer/css
+    dependencies:
+      lezer: 0.13.5
+    dev: false
+
+  /lezer-html/0.13.6:
+    resolution: {integrity: sha512-FY8ULPsyrbxSCre95hqU69ydCIbjRKoAwWSYbuBL7om6XmQ0C/M9PxV2NToWIgYGK5Yr5MzrsK/H7vsdJGpB2g==}
+    deprecated: This package has been replaced by @lezer/html
+    dependencies:
+      lezer: 0.13.5
+    dev: false
+
+  /lezer-javascript/0.13.4:
+    resolution: {integrity: sha512-nhRbeSwPZo2xVYq6TWyUhi/r9j0CFSUpkuA5J992Az2AYZFw2HnGVjixfP43DKufL+npJwSy0qcCcAHFQ2bFOQ==}
+    deprecated: This package has been replaced by @lezer/javascript
+    dependencies:
+      lezer: 0.13.5
+    dev: false
+
+  /lezer-tree/0.13.2:
+    resolution: {integrity: sha512-15ZxW8TxVNAOkHIo43Iouv4zbSkQQ5chQHBpwXcD2bBFz46RB4jYLEEww5l1V0xyIx9U2clSyyrLes+hAUFrGQ==}
+    deprecated: This package has been replaced by @lezer/common
+    dev: false
+
+  /lezer/0.13.5:
+    resolution: {integrity: sha512-cAiMQZGUo2BD8mpcz7Nv1TlKzWP7YIdIRrX41CiP5bk5t4GHxskOxWUx2iAOuHlz8dO+ivbuXr0J1bfHsWD+lQ==}
+    deprecated: This package has been replaced by @lezer/lr
+    dependencies:
+      lezer-tree: 0.13.2
+    dev: false
+
   /lilconfig/2.0.3:
     resolution: {integrity: sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg==}
     engines: {node: '>=10'}
@@ -2835,6 +3192,26 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /primeflex/2.0.0:
+    resolution: {integrity: sha512-t6AG3iRI1rh04uI+9nC4JSlbKfA8PnpRDFtjyqi3rDSLRgdfOuhIiunJbjVQ4alnnCfuQAAbVyde1AKN9QxT/w==}
+    dev: false
+
+  /primeicons/4.1.0:
+    resolution: {integrity: sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S/pscIQYS5YDLxsQZ7D9jn5c76+Tx5wX/2J1nK6sA==}
+    dev: false
+
+  /primevue/3.7.2:
+    resolution: {integrity: sha512-yPfoeabXwnmZJ6+L8qGazN99YI4aGglHziyN1vqD+aQ07kx7ktpSks//uzGdxJb5NTzdk8/+/vJ6U4T+ZUY/AQ==}
+    dev: false
+
+  /prism-theme-vars/0.2.2:
+    resolution: {integrity: sha512-EL9ifuU/F8tEldoCa2sspiiLWysCL54xDbf2gN/ubwdtbuJROqOGopG5kSwunapwaioT+jLUQ/Ky+7jnv62xJA==}
+    dev: false
+
+  /prismjs/1.25.0:
+    resolution: {integrity: sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==}
+    dev: false
+
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
@@ -3081,6 +3458,10 @@ packages:
     resolution: {integrity: sha512-oie3/+gKf7QtpitB0LYLETe+k8SifzsX4KixvpOsbI6S0kRiRQ5MKOio8eMSAKQ17N06+wdEOXRiId+zOxo0hA==}
     dev: true
 
+  /splitpanes/3.0.6:
+    resolution: {integrity: sha512-Ogxc+e2te4Tp5IpMwjOPO1ZvXUf2PsuEoyZhF9H5Hp6XOB0mLg/OnEZFaK2MxT7Q3O+WSEKE7CeOoTC+4zsQ6A==}
+    dev: false
+
   /sprintf-js/1.0.3:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
@@ -3142,6 +3523,10 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
     dev: true
+
+  /style-mod/4.0.0:
+    resolution: {integrity: sha512-OPhtyEjyyN9x3nhPsu76f52yUGXiZcgvsrFVtvTkyGRQJ0XK+GPc6ov1z+lRpbeabka+MYEQxOYRnt5nF30aMw==}
+    dev: false
 
   /sucrase/3.20.1:
     resolution: {integrity: sha512-BIG59HaJOxNct9Va6KvT5yzBA/rcMGetzvZyTx0ZdCcspIbpJTPS64zuAfYlJuOj+3WaI5JOdA+F0bJQQi8ZiQ==}
@@ -3538,6 +3923,16 @@ packages:
       '@vue/shared': 3.2.19
     dev: false
 
+  /vue3-runtime-template/1.0.1:
+    resolution: {integrity: sha512-bbL3PwlUinJWjMcGrfSYibVUcfM6/ZQN+P9WkQZg+rUvDaJKdoB3GjHlhd+wkrp5WSbwEMxCxJqydA0isFsFBQ==}
+    dependencies:
+      vue: 3.2.19
+    dev: false
+
+  /w3c-keyname/2.2.4:
+    resolution: {integrity: sha512-tOhfEwEzFLJzf6d1ZPkYfGj+FWhIpBux9ppoP3rlclw3Z0BZv3N7b7030Z1kYth+6rDuAsXUFr+d0VE6Ed1ikw==}
+    dev: false
+
   /webpack-virtual-modules/0.4.3:
     resolution: {integrity: sha512-5NUqC2JquIL2pBAAo/VfBP6KuGkHIZQXW/lNKupLPfhViwh8wNsu0BObtl09yuKZszeEUfbXz8xhrHvSG16Nqw==}
     dev: true
@@ -3580,6 +3975,12 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /windicss/3.1.7:
+    resolution: {integrity: sha512-Q/HQ9j+r2R0fdt85zAjccdo11kHWzQmpkuwIUQIO6PSypyDmBTfN14aAy4szLrpgo2woyuHM7Y+kir4IG4qnKQ==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /windicss/3.1.8:
     resolution: {integrity: sha512-G1UfnnSZ3s4MZnqqIL8DOQbL8rBArQKlodlby8OvP333TPaRouamuIuYyCt5kSNEJzFrkx168TSRIkqhDs9bOA==}

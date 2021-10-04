@@ -7,6 +7,7 @@ declare module 'vue' {
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
+    CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
   }

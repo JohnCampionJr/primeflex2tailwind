@@ -1,15 +1,40 @@
 <script setup lang="ts">
-const name = ref('')
+import VRuntimeTemplate from 'vue3-runtime-template'
+import Editor from '../components/Editor'
+import IFramePreview from '~/components/IFramePreview'
+import { useWindiCSS } from '~/components/useWindiCSS'
 
+const name = ref('')
+const htmlCode = ref('')
+const secondCode = ref('')
+const styleCode = ref('')
+const template = ref('<div style="background: grey;"><InputText/>&nbsp;</div>')
 const router = useRouter()
+const {
+  processor,
+  generatedCSS,
+} = useWindiCSS(htmlCode, styleCode, undefined)
+
 const go = () => {
   if (name.value)
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
+watchEffect(() => {
+  try {
+    secondCode.value = htmlCode.value
+    template.value = htmlCode.value
+    const element = document.getElementById('windi-dyn')
+    if (element)
+      element.innerHTML = generatedCSS.value
+  }
+  finally {}
+})
 </script>
 
 <template>
-  <div>
+  <Editor v-model="htmlCode" :processor="processor"></Editor>
+  <Editor :updated-value="secondCode" :line-numbers="false"></Editor>
+  <div class="text-center text-gray-700 dark:text-gray-200">
     <p class="text-4xl">
       <carbon-campsite class="inline-block" />
     </p>
@@ -23,6 +48,7 @@ const go = () => {
     </p>
 
     <div class="py-4" />
+    <v-runtime-template :template="template"></v-runtime-template>
 
     <input
       id="input"

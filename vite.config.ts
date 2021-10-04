@@ -11,6 +11,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 export default defineConfig({
   resolve: {
     alias: {
+      'vue': `${path.resolve(__dirname, 'node_modules/vue/dist/vue.esm-bundler.js')}`,
+      'vue$': `${path.resolve(__dirname, 'node_modules/vue/dist/vue.esm-bundler.js')}`,
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
