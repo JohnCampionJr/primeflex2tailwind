@@ -152,6 +152,19 @@ const primeFlexMap = {
   'border-y-2': 'border-t-2 border-b-2',
   'border-y-3': 'border-t-3 border-b-3',
 
+  // border color
+  'border-0': 'border-surface-0',
+  'border-50': 'border-surface-50',
+  'border-100': 'border-surface-100',
+  'border-200': 'border-surface-200',
+  'border-300': 'border-surface-300',
+  'border-400': 'border-surface-400',
+  'border-500': 'border-surface-500',
+  'border-600': 'border-surface-600',
+  'border-700': 'border-surface-700',
+  'border-800': 'border-surface-800',
+  'border-900': 'border-surface-900',
+
   // padding
   'p-8': 'p-20',
   'p-7': 'p-16',
@@ -394,6 +407,9 @@ const primeFlexMap = {
   '-translate-x-100': '-translate-x-full',
   'translate-y-100': 'translate-y-full',
   '-translate-y-100': '-translate-y-full',
+
+  'grid': 'pf-grid',
+  'col': 'pf-col',
 }
 
 // https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings

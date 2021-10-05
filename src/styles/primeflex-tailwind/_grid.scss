@@ -1,4 +1,4 @@
-.grid {
+.pf-grid {
     display: flex !important;
     flex-wrap: wrap;
     margin-right: -1 * $gutter;
@@ -6,62 +6,62 @@
     margin-top: -1 * $gutter;
 }
 
-.grid > .col,
-.grid > [class*="col"] {
+.pf-grid > .pf-col,
+.pf-grid > [class*="col"] {
     box-sizing: border-box;
 }
 
-.grid-nogutter {
+.pf-grid-nogutter {
     margin-right: 0;
     margin-left: 0;
     margin-top: 0;
 }
 
-.grid-nogutter > .col,
-.grid-nogutter > [class*="col-"] {
+.pf-grid-nogutter > .pf-col,
+.pf-grid-nogutter > [class*="pf-col-"] {
     padding: 0;
 }
 
-.col {
+.pf-col {
     flex-grow: 1;
     flex-basis: 0;
     padding: $gutter;
 }
 
-.col-fixed {
+.pf-col-fixed {
     flex: 0 0 auto;
     padding: $gutter;
 }
 
 $grid-columns: (
-    "col-1": 8.3333%,
-    "col-2": 16.6667%,
-    "col-3": 25%,
-    "col-4": 33.3333%,
-    "col-5": 41.6667%,
-    "col-6": 50%,
-    "col-7": 58.3333%,
-    "col-8": 66.6667%,
-    "col-9": 75%,
-    "col-10": 83.3333%,
-    "col-11": 91.6667%,
-    "col-12": 100%
+    "pf-col-1": 8.3333%,
+    "pf-col-2": 16.6667%,
+    "pf-col-3": 25%,
+    "pf-col-4": 33.3333%,
+    "pf-col-5": 41.6667%,
+    "pf-col-6": 50%,
+    "pf-col-7": 58.3333%,
+    "pf-col-8": 66.6667%,
+    "pf-col-9": 75%,
+    "pf-col-10": 83.3333%,
+    "pf-col-11": 91.6667%,
+    "pf-col-12": 100%
 );
 
 $grid-column-offsets: (
-    "col-offset-0": 0,
-    "col-offset-1": 8.3333%,
-    "col-offset-2": 16.6667%,
-    "col-offset-3": 25%,
-    "col-offset-4": 33.3333%,
-    "col-offset-5": 41.6667%,
-    "col-offset-6": 50%,
-    "col-offset-7": 58.3333%,
-    "col-offset-8": 66.6667%,
-    "col-offset-9": 75%,
-    "col-offset-10": 83.3333%,
-    "col-offset-11": 91.6667%,
-    "col-offset-12": 100%,
+    "pf-col-offset-0": 0,
+    "pf-col-offset-1": 8.3333%,
+    "pf-col-offset-2": 16.6667%,
+    "pf-col-offset-3": 25%,
+    "pf-col-offset-4": 33.3333%,
+    "pf-col-offset-5": 41.6667%,
+    "pf-col-offset-6": 50%,
+    "pf-col-offset-7": 58.3333%,
+    "pf-col-offset-8": 66.6667%,
+    "pf-col-offset-9": 75%,
+    "pf-col-offset-10": 83.3333%,
+    "pf-col-offset-11": 91.6667%,
+    "pf-col-offset-12": 100%,
 );
 
 @each $col,$width in $grid-columns {

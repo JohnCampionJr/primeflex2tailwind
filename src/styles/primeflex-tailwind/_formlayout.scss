@@ -7,7 +7,7 @@
     margin-bottom: $fieldLabelMargin;
 }
 
-.field.grid > label {
+.field.pf-grid > label {
     display: flex;
     align-items: center;
 }
@@ -16,39 +16,39 @@
     margin-top: $helperTextMargin;
 }
 
-.field.grid,
-.formgrid.grid {
+.field.pf-grid,
+.formgrid.pf-grid {
     margin-top: 0;
 }
 
-.field.grid .col-fixed,
-.formgrid.grid .col-fixed,
-.field.grid .col,
-.formgrid.grid .col,
-.field.grid .col-1, 
-.formgrid.grid .col-1, 
-.field.grid .col-2,
-.formgrid.grid .col-2, 
-.field.grid .col-3, 
-.formgrid.grid .col-3, 
-.field.grid .col-4, 
-.formgrid.grid .col-4, 
-.field.grid .col-5, 
-.formgrid.grid .col-5, 
-.field.grid .col-6, 
-.formgrid.grid .col-6,
-.field.grid .col-7, 
-.formgrid.grid .col-7, 
-.field.grid .col-8, 
-.formgrid.grid .col-8, 
-.field.grid .col-9, 
-.formgrid.grid .col-9, 
-.field.grid .col-10, 
-.formgrid.grid .col-10, 
-.field.grid .col-11, 
-.formgrid.grid .col-11, 
-.field.grid .col-12,
-.formgrid.grid .col-12 {
+.field.pf-grid .pf-col-fixed,
+.formgrid.pf-grid .pf-col-fixed,
+.field.pf-grid .col,
+.formgrid.pf-grid .col,
+.field.pf-grid .pf-col-1, 
+.formgrid.pf-grid .pf-col-1, 
+.field.pf-grid .pf-col-2,
+.formgrid.pf-grid .pf-col-2, 
+.field.pf-grid .pf-col-3, 
+.formgrid.pf-grid .pf-col-3, 
+.field.pf-grid .pf-col-4, 
+.formgrid.pf-grid .pf-col-4, 
+.field.pf-grid .pf-col-5, 
+.formgrid.pf-grid .pf-col-5, 
+.field.pf-grid .pf-col-6, 
+.formgrid.pf-grid .pf-col-6,
+.field.pf-grid .pf-col-7, 
+.formgrid.pf-grid .pf-col-7, 
+.field.pf-grid .pf-col-8, 
+.formgrid.pf-grid .pf-col-8, 
+.field.pf-grid .pf-col-9, 
+.formgrid.pf-grid .pf-col-9, 
+.field.pf-grid .pf-col-10, 
+.formgrid.pf-grid .pf-col-10, 
+.field.pf-grid .pf-col-11, 
+.formgrid.pf-grid .pf-col-11, 
+.field.pf-grid .pf-col-12,
+.formgrid.pf-grid .pf-col-12 {
     padding-top: 0;
     padding-bottom: 0;
 }

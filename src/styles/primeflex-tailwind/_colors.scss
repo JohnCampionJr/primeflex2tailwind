@@ -2,7 +2,7 @@ $surfaceShades: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @include surface-class('text', 'color', $surfaceShades);
 @include surface-class('surface', 'background-color', $surfaceShades);
-@include surface-class('border', 'border-color', $surfaceShades);
+@include surface-class('border-surface', 'border-color', $surfaceShades);
 
 .text-primary {
     color: var(--primary-color) !important;
