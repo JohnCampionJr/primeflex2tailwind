@@ -5,6 +5,7 @@ export default defineConfig({
   // https://windicss.org/posts/v30.html#attributify-mode
   attributify: true,
   preflight: false,
+  exclude: [/^p-grid-/, /^p-col-/, /^p-mb-/, /^p-mr-/, /^p-ml-/, /^p-mt-/, /^<transition/],
   theme: {
     extend: {
       borderRadius: {
