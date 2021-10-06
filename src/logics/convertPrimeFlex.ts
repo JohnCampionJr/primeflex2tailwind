@@ -257,42 +257,18 @@ const primeFlexMap = {
   'min-w-screen': '',
 
   // widths
-  'w-1"': 'w-1/12"',
-  'w-2"': 'w-2/12"',
-  'w-3"': 'w-3/12"',
-  'w-4"': 'w-4/12"',
-  'w-5"': 'w-5/12"',
-  'w-6"': 'w-6/12"',
-  'w-7"': 'w-7/12"',
-  'w-8"': 'w-8/12"',
-  'w-9"': 'w-9/12"',
-  'w-10"': 'w-10/12"',
-  'w-11"': 'w-11/12"',
-  'w-12"': 'w-full"',
-  'w-1 ': 'w-1/12 ',
-  'w-2 ': 'w-2/12 ',
-  'w-3 ': 'w-3/12 ',
-  'w-4 ': 'w-4/12 ',
-  'w-5 ': 'w-5/12 ',
-  'w-6 ': 'w-6/12 ',
-  'w-7 ': 'w-7/12 ',
-  'w-8 ': 'w-8/12 ',
-  'w-9 ': 'w-9/12 ',
-  'w-10 ': 'w-10/12 ',
-  'w-11 ': 'w-11/12 ',
-  'w-12 ': 'w-full ',
-  'w-1\'': 'w-1/12\'',
-  'w-2\'': 'w-2/12\'',
-  'w-3\'': 'w-3/12\'',
-  'w-4\'': 'w-4/12\'',
-  'w-5\'': 'w-5/12\'',
-  'w-6\'': 'w-6/12\'',
-  'w-7\'': 'w-7/12\'',
-  'w-8\'': 'w-8/12\'',
-  'w-9\'': 'w-9/12\'',
-  'w-10\'': 'w-10/12\'',
-  'w-11\'': 'w-11/12\'',
-  'w-12\'': 'w-full\'',
+  'w-1': 'w-1/12',
+  'w-2': 'w-2/12',
+  'w-3': 'w-3/12',
+  'w-4': 'w-4/12',
+  'w-5': 'w-5/12',
+  'w-6': 'w-6/12',
+  'w-7': 'w-7/12',
+  'w-8': 'w-8/12',
+  'w-9': 'w-9/12',
+  'w-10': 'w-10/12',
+  'w-11': 'w-11/12',
+  'w-12': 'w-full',
 
   'w-1rem': 'w-4',
   'w-2rem': 'w-8',
@@ -409,18 +385,46 @@ const primeFlexMap = {
   '-translate-y-100': '-translate-y-full',
 
   'grid': 'pf-grid',
+  'grid-nogutter': 'pf-grid-nogutter',
   'col': 'pf-col',
+  'col-fixed': 'pf-col-fixed',
+  'col-1': 'pf-col-1',
+  'col-2': 'pf-col-2',
+  'col-3': 'pf-col-3',
+  'col-4': 'pf-col-4',
+  'col-5': 'pf-col-5',
+  'col-6': 'pf-col-6',
+  'col-7': 'pf-col-7',
+  'col-8': 'pf-col-8',
+  'col-9': 'pf-col-9',
+  'col-10': 'pf-col-10',
+  'col-11': 'pf-col-11',
+  'col-12': 'pf-col-12',
+  'col-offset-1': 'pf-col-offset-1',
+  'col-offset-2': 'pf-col-offset-2',
+  'col-offset-3': 'pf-col-offset-3',
+  'col-offset-4': 'pf-col-offset-4',
+  'col-offset-5': 'pf-col-offset-5',
+  'col-offset-6': 'pf-col-offset-6',
+  'col-offset-7': 'pf-col-offset-7',
+  'col-offset-8': 'pf-col-offset-8',
+  'col-offset-9': 'pf-col-offset-9',
+  'col-offset-10': 'pf-col-offset-10',
+  'col-offset-11': 'pf-col-offset-11',
+  'col-offset-12': 'pf-col-offset-12',
 }
 
-// https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
-function replaceAll(str: string, mapObj: any) {
-  const re = new RegExp(Object.keys(mapObj).join('|'), 'gi')
+const re = new RegExp(`\\b${Object.keys(primeFlexMap).join('|')}\\b`, 'gi')
 
-  return str.replace(re, (matched) => {
-    return mapObj[matched.toLowerCase()]
+function replaceClassNames(match: string, p1: string, p2: string) {
+  const test = p2.replace(re, (matched) => {
+    // @ts-ignore
+    return primeFlexMap[matched.toLowerCase()]
   })
+
+  return `class=${p1}${test}${p1}`
 }
 
-export function convertPrimeFlex(str: string) {
-  return replaceAll(str, primeFlexMap)
+export function convertPrimeFlex(str: string): string {
+  return str.replace(/class=(['"])(.+?)['"]/gis, replaceClassNames)
 }
