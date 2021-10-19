@@ -59,3 +59,7 @@ $surfaceShades: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 .surface-border {
     border-color: var(--surface-border);
 }
+
+.surface-hover {
+    border-color: var(--surface-hover);
+} 
