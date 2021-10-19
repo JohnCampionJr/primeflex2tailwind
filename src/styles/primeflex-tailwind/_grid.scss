@@ -87,3 +87,8 @@ $grid-column-offsets: (
 }
 
 @include style-class('margin-left', $grid-column-offsets, true);
+
+// this fixes the DataView component using a plain grid class overlapping with Tailwind
+.p-grid.grid {
+    display: flex !important;
+}
