@@ -523,7 +523,7 @@ const primeFlexMap = {
   'text-black-alpha-90': 'text-black text-opacity-90',
 }
 
-const re = new RegExp(`\\b${Object.keys(primeFlexMap).join('|')}\\b`, 'gi')
+const re = new RegExp(`\\b(?:${Object.keys(primeFlexMap).join('|')})`, 'gi')
 
 function replaceClassNames(match: string, p1: string, p2: string) {
   const test = p2.replace(re, (matched) => {
