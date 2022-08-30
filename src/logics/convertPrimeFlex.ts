@@ -525,15 +525,15 @@ const primeFlexMap = {
 
 const re = new RegExp(`\\b(?:${Object.keys(primeFlexMap).join('|')})`, 'gi')
 
-function replaceClassNames(match: string, p1: string, p2: string) {
+function replaceClassNames(match: string, p1: string, p2: string, p3: string) {
   const test = p2.replace(re, (matched) => {
     // @ts-ignore
     return primeFlexMap[matched.toLowerCase()]
   })
 
-  return `class=${p1}${test}${p1}`
+  return `class=${p1}${test}${p3}`
 }
 
 export function convertPrimeFlex(str: string): string {
-  return str.replace(/class=(['"])(.+?)['"]/gis, replaceClassNames)
+  return str.replace(/class=(['"])(.+?)(['"])/gis, replaceClassNames)
 }
