@@ -41,25 +41,47 @@ $surfaceShades: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 }
 
 .surface-ground {
-    background-color: var(--surface-ground);
+    background-color: var(--surface-ground) !important; 
 }
 
 .surface-section {
-    background-color: var(--surface-section);
+    background-color: var(--surface-section) !important; 
 }
 
 .surface-card {
-    background-color: var(--surface-card);
+    background-color: var(--surface-card) !important; 
 }
 
 .surface-overlay {
-    background-color: var(--surface-overlay);
+    background-color: var(--surface-overlay) !important; 
 }
 
 .surface-border {
-    border-color: var(--surface-border);
+    border-color: var(--surface-border) !important; 
 }
 
 .surface-hover {
-    border-color: var(--surface-hover);
-} 
+    background-color: var(--surface-hover) !important;
+}
+
+.hover\:surface-hover:hover {
+    background-color: var(--surface-hover) !important;
+}
+
+// primeflex 3.2.0 additinoal colors
+
+.text-color {
+  color: var(--text-color) !important;
+}
+
+.hover\:text-color:hover {
+  color: var(--text-color) !important;
+}
+
+.text-color-secondary {
+  color: var(--text-color-secondary) !important;
+}
+
+.hover\:text-color-secondary:hover {
+  color: var(--text-color-secondary) !important;
+}

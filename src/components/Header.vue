@@ -7,7 +7,7 @@
       <div class="flex items-center flex-1">
         <AppLogo />
         <span class="hidden md:block text-sm ml-2 mt-1 text-cool-gray-400 dark:text-cool-gray-500">
-          PrimeFlex 3.1.0 Converter
+          PrimeFlex 3.3.0 Converter
         </span>
       </div>
       <div class="flex items-center md:space-x-3">

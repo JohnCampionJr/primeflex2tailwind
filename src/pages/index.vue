@@ -79,7 +79,7 @@ watchEffect(() => {
 
 <template>
   <Header />
-  <div class="pt-$header-height">
+  <div class="pt-20">
     <div class="playground">
       <Splitpanes :horizontal="!bpmd || layout === 'bottom'" class="w-full h-full default-theme">
         <Pane v-if="layout === 'left'" min-size="20" :size="bpmd ? 40 : 33">
@@ -96,10 +96,10 @@ watchEffect(() => {
           </Splitpanes>
         </Pane>
         <Pane v-if="layout !== 'left'" min-size="20" :size="bpmd ? 40 : 33">
-          <div class="relative overflow-scroll h-full w-full bg-blue-gray-100">
+          <div class="relative overflow-scroll h-full w-full surface-ground">
             <div class="block-title">
               <div class="w-full flex justify-between items-center">
-                <span>Preview (Note: Breakpoints will not work here)</span>
+                <span>Preview (Note: Media Breakpoints will not work here)</span>
               </div>
             </div>
             <div class="absolute inset-0 pt-12 p-4 h-full w-full">
