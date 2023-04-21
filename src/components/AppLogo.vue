@@ -20,6 +20,6 @@
       src="/logo.svg"
       alt="Logo"
     >
-    WindiCSS
+    TailwindCSS
   </div>
 </template>
