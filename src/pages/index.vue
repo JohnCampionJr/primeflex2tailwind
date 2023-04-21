@@ -91,7 +91,7 @@ watchEffect(() => {
               <PlayEditorBlock v-model="htmlCode" class="w-full h-full" title="PrimeFlex Code" :processor="processor" />
             </Pane>
             <Pane min-size="20">
-              <PlayReadOnlyEditorBlock :updated-value="secondCode" class="w-full h-full" title="Windi CSS Code" :processor="processor" />
+              <PlayReadOnlyEditorBlock :updated-value="secondCode" class="w-full h-full" title="Tailwind CSS Code" :processor="processor" />
             </Pane>
           </Splitpanes>
         </Pane>
